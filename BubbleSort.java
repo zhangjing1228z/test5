@@ -2,7 +2,7 @@ public class BubbleSort {
     
     /**
      * 冒泡排序方法
-     * @param arr 待排序的整型数组
+     * @param arr 待排序的整数数组
      */
     public static void bubbleSort(int[] arr) {
         if (arr == null || arr.length <= 1) {
@@ -36,18 +36,18 @@ public class BubbleSort {
     
     // 测试方法
     public static void main(String[] args) {
-        int[] array = {64, 34, 25, 12, 22, 11, 90};
+        int[] arr = {64, 34, 25, 12, 22, 11, 90};
         
         System.out.println("排序前:");
-        printArray(array);
+        printArray(arr);
         
-        bubbleSort(array);
+        bubbleSort(arr);
         
-        System.out.println("排序后:");
-        printArray(array);
+        System.out.println("\n排序后:");
+        printArray(arr);
     }
     
-    // 打印数组方法
+    // 打印数组的辅助方法
     public static void printArray(int[] arr) {
         for (int value : arr) {
             System.out.print(value + " ");
