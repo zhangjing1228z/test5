@@ -1,4 +1,54 @@
-```
-# Compiled files
+# Compiled and binary files
 *.class
-```
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.a
+*.out
+
+# Dependencies
+lib/
+libs/
+dependency/
+dependencies/
+
+# Build artifacts
+build/
+target/
+dist/
+out/
+bin/
+obj/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.tmp
+
+# Logs
+*.log
+
+# Environment
+.env
+.env.local
+*.env.*
+
+# Cache
+.cache/
+.mypy_cache/
+.pytest_cache/
+.gradle/
+node_modules/
+__pycache__/
+*.pyc
+
+# System
+.DS_Store
+Thumbs.db
+coverage/
+htmlcov/
+.coverage
