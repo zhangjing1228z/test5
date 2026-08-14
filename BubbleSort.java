@@ -2,7 +2,7 @@ public class BubbleSort {
     
     /**
      * 冒泡排序方法
-     * @param arr 待排序的整型数组
+     * @param arr 待排序的整数数组
      */
     public static void bubbleSort(int[] arr) {
         if (arr == null || arr.length <= 1) {
@@ -18,7 +18,7 @@ public class BubbleSort {
             // 每一轮将最大的元素"冒泡"到末尾
             for (int j = 0; j < n - 1 - i; j++) {
                 if (arr[j] > arr[j + 1]) {
-                    // 交换元素
+                    // 交换相邻元素
                     int temp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
@@ -26,7 +26,7 @@ public class BubbleSort {
                 }
             }
             
-            // 如果这一轮没有发生交换，说明数组已经有序，提前结束
+            // 如果某一轮没有发生交换，说明已经有序，提前结束
             if (!swapped) {
                 break;
             }
