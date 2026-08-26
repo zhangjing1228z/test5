@@ -2,7 +2,7 @@ public class BubbleSort {
     
     /**
      * 冒泡排序方法
-     * @param arr 待排序的整型数组
+     * @param arr 待排序的整数数组
      */
     public static void bubbleSort(int[] arr) {
         if (arr == null || arr.length <= 1) {
@@ -12,14 +12,13 @@ public class BubbleSort {
         int n = arr.length;
         boolean swapped;
         
-        // 外层循环控制趟数
         for (int i = 0; i < n - 1; i++) {
             swapped = false;
             
-            // 内层循环进行相邻元素比较和交换
+            // 最后 i 个元素已经有序，不需要再比较
             for (int j = 0; j < n - 1 - i; j++) {
                 if (arr[j] > arr[j + 1]) {
-                    // 交换元素
+                    // 交换相邻元素
                     int temp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
@@ -27,7 +26,7 @@ public class BubbleSort {
                 }
             }
             
-            // 如果一趟下来没有发生交换，说明已经有序，提前结束
+            // 如果这一趟没有发生交换，说明数组已经有序，提前结束
             if (!swapped) {
                 break;
             }
@@ -36,18 +35,18 @@ public class BubbleSort {
     
     // 测试方法
     public static void main(String[] args) {
-        int[] array = {64, 34, 25, 12, 22, 11, 90};
+        int[] arr = {64, 34, 25, 12, 22, 11, 90};
         
         System.out.println("排序前:");
-        printArray(array);
+        printArray(arr);
         
-        bubbleSort(array);
+        bubbleSort(arr);
         
         System.out.println("排序后:");
-        printArray(array);
+        printArray(arr);
     }
     
-    // 打印数组方法
+    // 打印数组的辅助方法
     public static void printArray(int[] arr) {
         for (int value : arr) {
             System.out.print(value + " ");
