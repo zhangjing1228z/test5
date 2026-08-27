@@ -1,41 +1,29 @@
-```
-# Compiled files
+```java
+# Compiled Java files
 *.class
-
-# Dependencies
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
+*.jar
+*.war
+*.ear
 
 # Build directories
 build/
-dist/
-*.egg-info/
+target/
+out/
 
-# Environment
-.env
-.env.local
-*.env.*
-
-# Editors
-.vscode/
+# IDE files
+.gradle/
 .idea/
-*.swp
-*.swo
+.vscode/
 
 # Logs
 *.log
 
-# Coverage
-.coverage
-coverage/
-htmlcov/
+# Temporary files
+*.tmp
+*.temp
+*.swp
 
-# Python cache
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
+# Dependencies
+lib/
+libs/
 ```
