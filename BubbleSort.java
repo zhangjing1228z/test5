@@ -12,10 +12,11 @@ public class BubbleSort {
         int n = arr.length;
         boolean swapped;
         
+        // 外层循环控制趟数
         for (int i = 0; i < n - 1; i++) {
             swapped = false;
             
-            // 最后 i 个元素已经有序，不需要再比较
+            // 内层循环进行相邻元素比较和交换
             for (int j = 0; j < n - 1 - i; j++) {
                 if (arr[j] > arr[j + 1]) {
                     // 交换元素
@@ -26,7 +27,7 @@ public class BubbleSort {
                 }
             }
             
-            // 如果这一轮没有发生交换，说明数组已经有序，提前结束
+            // 如果这一趟没有发生交换，说明已经有序，提前结束
             if (!swapped) {
                 break;
             }
@@ -46,6 +47,7 @@ public class BubbleSort {
         printArray(arr);
     }
     
+    // 打印数组方法
     public static void printArray(int[] arr) {
         for (int value : arr) {
             System.out.print(value + " ");
