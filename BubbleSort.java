@@ -1,11 +1,15 @@
 public class BubbleSort {
     /**
-     * 冒泡排序方法
+     * 冒泡排序方法：将整型数组按升序排列
+     * 原理：重复遍历数组，比较相邻元素，若顺序错误则交换，
+     * 每一轮遍历都会把当前未排序部分的最大值"冒泡"到末尾。
+     *
      * @param arr 待排序的整数数组
+     * @return 排序后的数组（原地排序，返回同一引用）
      */
-    public static void bubbleSort(int[] arr) {
+    public static int[] bubbleSort(int[] arr) {
         if (arr == null || arr.length <= 1) {
-            return;
+            return arr;
         }
         
         int n = arr.length;
@@ -30,6 +34,7 @@ public class BubbleSort {
                 break;
             }
         }
+        return arr;
     }
     
     // 测试方法
